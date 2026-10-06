@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Globe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="loader-title">Photo Globe</div>
+      <div class="loader-bar">
+        <div class="loader-progress" id="progress-bar"></div>
+      </div>
+      <div class="loader-percent" id="progress-text">0%</div>
+    </div>
+  </div>
+
+  <!-- Three.js Canvas -->
+  <div id="canvas-container"></div>
+
+  <!-- Instructions -->
+  <div id="instructions">Drag to rotate &bull; Scroll to zoom</div>
+
+  <!-- Photo Modal / Lightbox -->
+  <div id="photo-modal">
+    <div class="modal-image-wrapper" id="modal-wrapper">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <img id="modal-image" alt="Photo" />
+      <div class="modal-spinner" id="modal-spinner"></div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
